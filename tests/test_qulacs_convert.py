@@ -87,7 +87,7 @@ def test_ibm_gateset() -> None:
 
 
 def test_rotations() -> None:
-    # https://github.com/CQCL/pytket/issues/35
+    # https://github.com/Quantinuum/pytket/issues/35
     circ = Circuit(1).Rx(0.5, 0)
     qulacs_circ = tk_to_qulacs(circ)
     state = QuantumState(1)
