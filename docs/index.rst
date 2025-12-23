@@ -11,7 +11,7 @@ to be simulated using ``qulacs``.
 Windows. To install, run:
 
 ::
-   
+
    pip install pytket-qulacs
 
 GPU acceleration
@@ -28,7 +28,7 @@ toolset. For platform-specific instructions on how to do this, see:
 Afterwards, install ``qulacs-gpu``:
 
 ::
-   
+
    pip install qulacs-gpu
 
 The ``QulacsGPUBackend`` has an identical API to the :py:class:`~.QulacsBackend`.
