@@ -26,7 +26,7 @@ classifiers = [
     "Topic :: Scientific/Engineering",
 ]
 dependencies = [
-    "pytket >= 2.7.0",
+    "pytket >= 2.11.0",
     "qulacs >= 0.6.12",
 ]
 
@@ -39,7 +39,7 @@ tracker = "https://github.com/Quantinuum/pytket-qulacs/issues"
 find = {}
 
 [tool.setuptools.dynamic]
-version = {attr = "_metadata.__extension_version__"}
+version = {attr = "pytket.extensions.qulacs._metadata.__extension_version__"}
 
 [build-system]
 requires = ["setuptools"]

@@ -22,7 +22,7 @@ on your machine for faster simulation, it is necessary to first install the CUDA
 toolset. For platform-specific instructions on how to do this, see:
 
 - `Linux <https://docs.nvidia.com/cuda/cuda-installation-guide-linux/>`_
-- `MacOS <https://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/>`_
+- `MacOS <https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-mac-os-x/>`_
 - `Windows <https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/>`_
 
 Afterwards, install ``qulacs-gpu``:
