@@ -1,4 +1,4 @@
-# pytket-TODOEXTNAME
+# pytket-qulacs
 
 [![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://tketusers.slack.com/join/shared_invite/zt-18qmsamj9-UqQFVdkRzxnXCcKtcarLRA#)
 [![Stack Exchange](https://img.shields.io/badge/StackExchange-%23ffffff.svg?style=for-the-badge&logo=StackExchange)](https://quantumcomputing.stackexchange.com/tags/pytket)
@@ -6,20 +6,24 @@
 [Pytket](https://tket.quantinuum.com/api-docs/index.html) is a python module for interfacing
 with tket, a quantum computing toolkit and optimising compiler developed by Quantinuum.
 
-`pytket-TODOEXTNAME` is an extension to `pytket` that allows `pytket` circuits to be
-executed on .
+[Qulacs](https://github.com/qulacs/qulacs) is an open-source quantum circuit
+simulator designed for large, noisy, and parametric circuits with GPU support
+for fast execution.
+
+`pytket-qulacs` is an extension to `pytket` that allows `pytket` circuits to be
+run on the Qulacs simulator.
 
 Some useful links:
 
-- [API Documentation](https://tket.quantinuum.com/extensions/pytket-TODOEXTNAME/)
+- [API Documentation](https://tket.quantinuum.com/extensions/pytket-qulacs/)
 
 ## Getting started
 
-`pytket-TODOEXTNAME` is compatible with Python versions 3.10 to 3.13 on Linux, MacOS
+`pytket-qulacs` is compatible with Python versions 3.10 to 3.13 on Linux, MacOS
 and Windows. To install, run:
 
 ```shell
-pip install pytket-TODOEXTNAME
+pip install pytket-qulacs
 ```
 
 This will install `pytket` if it isn't already installed, and add new classes
@@ -28,7 +32,7 @@ and methods into the `pytket.extensions` namespace.
 ## Bugs, support and feature requests
 
 Please file bugs and feature requests on the Github
-[issue tracker](https://github.com/Quantinuum/pytket-TODOEXTNAME/issues).
+[issue tracker](https://github.com/Quantinuum/pytket-qulacs/issues).
 
 ## Development
 
