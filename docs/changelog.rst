@@ -37,7 +37,7 @@ Changelog
 -------------------
 
 * Updated pytket version requirement to 1.27.
-* Fix incorrect readout when circuit contains implicit swaps 
+* Fix incorrect readout when circuit contains implicit swaps
 
 0.35.0 (March 2024)
 -------------------

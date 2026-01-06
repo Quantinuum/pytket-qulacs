@@ -11,7 +11,7 @@ to be simulated using ``qulacs``.
 Windows. To install, run:
 
 ::
-   
+
    pip install pytket-qulacs
 
 GPU acceleration
@@ -22,13 +22,13 @@ on your machine for faster simulation, it is necessary to first install the CUDA
 toolset. For platform-specific instructions on how to do this, see:
 
 - `Linux <https://docs.nvidia.com/cuda/cuda-installation-guide-linux/>`_
-- `MacOS <https://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/>`_
+- `MacOS <https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-mac-os-x/>`_
 - `Windows <https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/>`_
 
 Afterwards, install ``qulacs-gpu``:
 
 ::
-   
+
    pip install qulacs-gpu
 
 The ``QulacsGPUBackend`` has an identical API to the :py:class:`~.QulacsBackend`.
@@ -40,5 +40,5 @@ The ``QulacsGPUBackend`` has an identical API to the :py:class:`~.QulacsBackend`
 .. toctree::
    :caption: Useful links
 
-   Issue tracker <https://github.com/CQCL/pytket-qulacs/issues>
+   Issue tracker <https://github.com/Quantinuum/pytket-qulacs/issues>
    PyPi <https://pypi.org/project/pytket-qulacs/>

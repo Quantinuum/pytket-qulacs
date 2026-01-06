@@ -14,12 +14,13 @@ for fast execution.
 run on the Qulacs simulator.
 
 Some useful links:
+
 - [API Documentation](https://tket.quantinuum.com/extensions/pytket-qulacs/)
 
 ## Getting started
 
-`pytket-qulacs` is available for Python 3.10, 3.11, 3.12 and 3.13 on Linux,
-MacOS and Windows (except for Python 3.13 on Windows). To install, run:
+`pytket-qulacs` is compatible with Python versions 3.10 to 3.13 on Linux, MacOS
+and Windows. To install, run:
 
 ```shell
 pip install pytket-qulacs
@@ -31,18 +32,23 @@ and methods into the `pytket.extensions` namespace.
 ## Bugs, support and feature requests
 
 Please file bugs and feature requests on the Github
-[issue tracker](https://github.com/CQCL/pytket-qulacs/issues).
-
-There is also a Slack channel for discussion and support. Click [here](https://tketusers.slack.com/join/shared_invite/zt-18qmsamj9-UqQFVdkRzxnXCcKtcarLRA#/shared-invite/email) to join.
+[issue tracker](https://github.com/Quantinuum/pytket-qulacs/issues).
 
 ## Development
 
-To install an extension in editable mode, simply change to its subdirectory
-within the `modules` directory, and run:
+To install an extension in editable mode run:
 
 ```shell
 pip install -e .
 ```
+
+We have set up the repo to be used with uv. You can use also:
+
+```shell
+uv sync --python 3.12
+```
+
+to install the package. This will automatically pick up all requirements for the tests as well.
 
 ## Contributing
 
@@ -55,24 +61,25 @@ tests and is accepted after review, it will be merged in.
 #### Formatting
 
 All code should be formatted using
-[black](https://black.readthedocs.io/en/stable/), with default options. This is
-checked on the CI. The CI is currently using version 20.8b1.
+[ruff](https://docs.astral.sh/ruff/formatter/), with default options. This is
+checked on the CI.
 
 #### Type annotation
 
 On the CI, [mypy](https://mypy.readthedocs.io/en/stable/) is used as a static
 type checker and all submissions must pass its checks. You should therefore run
-`mypy` locally on any changed files before submitting a PR. Because of the way
-extension modules embed themselves into the `pytket` namespace this is a little
-complicated, but it should be sufficient to run the script `modules/mypy-check`
-(passing as a single argument the root directory of the module to test). The
-script requires `mypy` 0.800 or above.
+`mypy` locally on any changed files before submitting a PR. You can run them with:
+
+```shell
+uv run mypy --config-file=mypy.ini --no-incremental --explicit-package-bases pytket tests
+```
 
 #### Linting
 
-We use [pylint](https://pypi.org/project/pylint/) on the CI to check compliance
-with a set of style requirements (listed in `.pylintrc`). You should run
-`pylint` over any changed files before submitting a PR, to catch any issues.
+We use [ruff](https://github.com/astral-sh/ruff) on the CI to check compliance with a set of style requirements (listed in `ruff.toml`).
+You should run `ruff` over any changed files before submitting a PR, to catch any issues.
+
+An easy way to meet all formatting and linting requirements is to issue `pre-commit run --all-files`.
 
 ### Tests
 
@@ -80,7 +87,7 @@ To run the tests for a module:
 
 1. `cd` into that module's `tests` directory;
 2. ensure you have installed `pytest`, `hypothesis`, and any modules listed in
-the `test-requirements.txt` file (all via `pip`);
+   the `test-requirements.txt` file (all via `pip`);
 3. run `pytest`.
 
 When adding a new feature, please add a test for it. When fixing a bug, please

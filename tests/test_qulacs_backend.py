@@ -341,7 +341,7 @@ def test_backend_with_circuit_permutation() -> None:
             counts = b.run_circuit(c, n_shots=100).get_counts()
             assert len(counts) == 1
             assert counts[expected_readout] == 100
-        # https://github.com/CQCL/pytket-qulacs/issues/86
+        # https://github.com/Quantinuum/pytket-qulacs/issues/86
         c = Circuit(2, 1).X(0).SWAP(0, 1).Measure(1, 0)
         compiled = b.get_compiled_circuit(c, optimisation_level=2)
         res = b.run_circuit(compiled, n_shots=5)
